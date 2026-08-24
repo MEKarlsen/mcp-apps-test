@@ -20,6 +20,7 @@
     "cors": "^2.8.6",
     "exceljs": "^4.4.0",
     "express": "^5.2.1",
+    "ol": "^10.10.0",
     "zod": "^4.4.3"
   },
   "devDependencies": {

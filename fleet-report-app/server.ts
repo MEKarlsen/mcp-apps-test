@@ -28,7 +28,7 @@ export function createServer(): McpServer {
     "get-fleet-report",
     {
       title: "Fleet Weekly Report",
-      description: "Displays an interactive dashboard analyzing current fleet utilization: hours logged per boat, status/type breakdown, and boats needing attention (low fuel, maintenance, long idle).",
+      description: "Displays an interactive dashboard analyzing current fleet utilization: hours logged per boat, and a harbor map showing each boat's location and status.",
       inputSchema: {},
       _meta: { ui: { resourceUri } },
     },
