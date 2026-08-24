@@ -5,20 +5,8 @@ const STATUS_COLOR_VAR: Record<string, string> = {
   "Maintenance": "var(--viz-cat-4)",
 };
 
-const TYPE_COLOR_VAR: Record<string, string> = {
-  "Yacht": "var(--viz-cat-1)",
-  "Catamaran": "var(--viz-cat-2)",
-  "Speedboat": "var(--viz-cat-3)",
-  "RIB": "var(--viz-cat-4)",
-  "Tender": "var(--viz-cat-5)",
-};
-
 export function statusColor(status: string): string {
   return STATUS_COLOR_VAR[status] ?? "var(--viz-muted)";
-}
-
-export function typeColor(type: string): string {
-  return TYPE_COLOR_VAR[type] ?? "var(--viz-muted)";
 }
 
 export interface BarRow {

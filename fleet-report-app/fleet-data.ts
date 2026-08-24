@@ -9,6 +9,10 @@ export interface BoatRow {
   hoursThisMonth: number;
   lastUsed: string;
   fuelPercent: number;
+  lat: number;
+  lon: number;
+  destLat: number | null;
+  destLon: number | null;
 }
 
 export interface FleetAnalysis {
@@ -75,6 +79,10 @@ export async function loadFleetRows(xlsxPath: string): Promise<BoatRow[]> {
       hoursThisMonth: Number(get("Hours This Month") ?? 0),
       lastUsed,
       fuelPercent: Number(get("Fuel %") ?? 0),
+      lat: Number(get("Latitude") ?? 0),
+      lon: Number(get("Longitude") ?? 0),
+      destLat: get("Destination Latitude") != null ? Number(get("Destination Latitude")) : null,
+      destLon: get("Destination Longitude") != null ? Number(get("Destination Longitude")) : null,
     });
   });
 
