@@ -1,0 +1,99 @@
+:root {
+  color-scheme: light dark;
+
+  /*
+   * Fallbacks for host style variables used by this app.
+   * The host may provide these (and many more) via the host context.
+   */
+  --color-text-primary: light-dark(#0b0b0b, #ffffff);
+  --color-text-secondary: light-dark(#52514e, #c3c2b7);
+  --color-text-inverse: light-dark(#f3f4f6, #1f2937);
+  --color-background-primary: light-dark(#fcfcfb, #1a1a19);
+  --color-background-page: light-dark(#f9f9f7, #0d0d0d);
+  --color-background-inverse: light-dark(#1a1a1a, #ffffff);
+  --color-ring-primary: light-dark(#3b82f6, #60a5fa);
+  --border-radius-md: 6px;
+  --border-radius-lg: 10px;
+  --border-width-regular: 1px;
+  --font-sans: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+  --font-text-md-size: 1rem;
+  --font-text-md-line-height: 1.5;
+  --font-text-sm-size: 0.875rem;
+  --font-text-sm-line-height: 1.4;
+  --font-heading-xl-size: 1.5rem;
+  --font-heading-xl-line-height: 1.25;
+  --font-heading-md-size: 1.0625rem;
+  --font-heading-md-line-height: 1.35;
+
+  /* Spacing derived from host typography */
+  --spacing-unit: var(--font-text-md-size);
+  --spacing-xs: calc(var(--spacing-unit) * 0.25);
+  --spacing-sm: calc(var(--spacing-unit) * 0.5);
+  --spacing-md: var(--spacing-unit);
+  --spacing-lg: calc(var(--spacing-unit) * 1.5);
+  --spacing-xl: calc(var(--spacing-unit) * 2);
+
+  --color-accent: #2563eb;
+  --color-text-on-accent: #ffffff;
+
+  /* ── Dataviz tokens (validated palette — see references/palette.md) ── */
+  --viz-surface: light-dark(#fcfcfb, #1a1a19);
+  --viz-gridline: light-dark(#e1e0d9, #2c2c2a);
+  --viz-baseline: light-dark(#c3c2b7, #383835);
+  --viz-muted: #898781;
+
+  /* Categorical, fixed order — slots 1-8 */
+  --viz-cat-1: light-dark(#2a78d6, #3987e5); /* blue */
+  --viz-cat-2: light-dark(#1baf7a, #199e70); /* aqua */
+  --viz-cat-3: light-dark(#eda100, #c98500); /* yellow */
+  --viz-cat-4: light-dark(#008300, #008300); /* green */
+  --viz-cat-5: light-dark(#4a3aa7, #9085e9); /* violet */
+  --viz-cat-6: light-dark(#e34948, #e66767); /* red */
+  --viz-cat-7: light-dark(#e87ba4, #d55181); /* magenta */
+  --viz-cat-8: light-dark(#eb6834, #d95926); /* orange */
+
+  /* Sequential (single-hue magnitude) */
+  --viz-sequential: light-dark(#2a78d6, #3987e5);
+
+  /* Status (reserved — never reused for categorical series) */
+  --viz-good: light-dark(#0ca30c, #0ca30c);
+  --viz-warning: light-dark(#fab219, #fab219);
+  --viz-serious: light-dark(#ec835a, #ec835a);
+  --viz-critical: light-dark(#d03b3b, #d03b3b);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: var(--font-sans);
+  font-size: var(--font-text-md-size);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--font-text-md-line-height);
+  color: var(--color-text-primary);
+  background: var(--color-background-page);
+}
+
+h3, h4 {
+  margin: 0;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+}
+h3 {
+  font-size: var(--font-heading-xl-size);
+  line-height: var(--font-heading-xl-line-height);
+}
+h4 {
+  font-size: var(--font-heading-md-size);
+  line-height: var(--font-heading-md-line-height);
+}
+
+code, pre, kbd {
+  font-family: var(--font-mono);
+  font-size: 1em;
+}

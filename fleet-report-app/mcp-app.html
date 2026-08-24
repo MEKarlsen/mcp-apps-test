@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>Fleet Weekly Report</title>
+</head>
+<body>
+  <main class="main">
+    <header class="header">
+      <h3>Fleet Weekly Report</h3>
+      <p id="summary-text" class="summary">Loading fleet data…</p>
+    </header>
+
+    <section id="stat-tiles" class="stat-tiles" aria-label="Fleet overview"></section>
+
+    <section class="card">
+      <h4>Hours logged this month</h4>
+      <div id="hours-chart" class="bar-chart"></div>
+    </section>
+
+    <div class="chart-row">
+      <section class="card">
+        <h4>Status breakdown</h4>
+        <div id="status-chart" class="bar-chart bar-chart--compact"></div>
+      </section>
+      <section class="card">
+        <h4>Avg. hours by type</h4>
+        <div id="type-chart" class="bar-chart bar-chart--compact"></div>
+      </section>
+    </div>
+
+    <section class="card">
+      <h4>Needs attention</h4>
+      <ul id="attention-list" class="attention-list"></ul>
+    </section>
+  </main>
+  <div id="tooltip" class="viz-tooltip" role="tooltip" hidden></div>
+  <script type="module" src="/src/mcp-app.ts"></script>
+</body>
+</html>
